@@ -2,11 +2,11 @@
 
 mkdir $HOME/ascii_ZZA
 cd $HOME/ascii_ZZA
-echo "Create Directory \"ascii_ZZA\"  $(pwd)"
+echo -e "Create Directory \"ascii_ZZA\"  $(pwd)"
 
 wget https://raw.githubusercontent.com/V70024/ZZA/master/ascii-zza.sh
 chmod +x ascii-zza.sh
-echo "Downloaded \"ascii-zza.sh\"  $(pwd)/ascii-zza.sh"
+echo -e "Downloaded \"ascii-zza.sh\"  $(pwd)/ascii-zza.sh"
 
 bashrc_runer="""
 # --------------------------------------------------------
@@ -37,4 +37,4 @@ while read -r line; do
     printf "%b\n"  "$line"  >> $HOME/.bashrc
 done <<< "$bashrc_runer"
 
-echo "\n\n\tThe installation was successful\n\n\t\t[Open a new terminal]\n\n\n\n"
+echo -e "\n\n\tThe installation was successful\n\n\t\t[Open a new terminal]\n\n\n\n"
