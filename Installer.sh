@@ -30,4 +30,13 @@ $(pwd)/ascii-zza.sh
 # --------------------------------------------------------
 """
 
-echo $bashrc_runer >> $HOME/.bashrc
+$padding_left = 0
+while read -r line; do
+    # printf  "%s\n" $line ""
+    # printf "%b\n" $line '' "" 
+    printf "%b\n"  "$line" ; sleep 0.07
+    printf "%b\n"  "$line"  >> $HOME/.bashrc
+
+done <<< "$bashrc_runer"
+
+# echo -e $bashrc_runer >> $HOME/.bashrc
