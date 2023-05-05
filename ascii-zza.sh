@@ -15,22 +15,28 @@ CLEAR_SCREEN_ON_START=true # [true or false]
 # When the program finishes running, it clears the terminal screen 
 CLEAR_SCREEN_ON_END=false # [true or false]
 
+# Characters 
+CHAR_1=" "
+CHAR_2="░"
+CHAR_3="▒"
+CHAR_4="▓"
+CHAR_5="█"
 
 # Up to this character for use in logo writing
-if (( CHARACTER_NUM == 1 )); then CHARACTER=" "  
-elif (( CHARACTER_NUM == 2 )); then CHARACTER="░"
-elif (( CHARACTER_NUM == 3 )); then CHARACTER="▒"
-elif (( CHARACTER_NUM == 4 )); then CHARACTER="▓"
-elif (( CHARACTER_NUM == 5 )); then CHARACTER="█"
+if (( CHARACTER_NUM == 1 )); then CHARACTER=$CHAR_1
+elif (( CHARACTER_NUM == 2 )); then CHARACTER=$CHAR_2
+elif (( CHARACTER_NUM == 3 )); then CHARACTER=$CHAR_3
+elif (( CHARACTER_NUM == 4 )); then CHARACTER=$CHAR_4
+elif (( CHARACTER_NUM == 5 )); then CHARACTER=$CHAR_5
 else  echo -e "Error [CHARACTER_NUM] \n\tThe \"CHARACTER_NUM\" variable can only take numbers between 1 and 5 \n(1: , 2:░, 3:▒, 4:▓, 5:█)" ; exit
 fi
 
 # up to this character for use in the mole parts of the logo
-if (( NOT_CHARACTER_NUM == 1 )); then NOT_CHARACTER=" "  
-elif (( NOT_CHARACTER_NUM == 2 )); then NOT_CHARACTER="░"
-elif (( NOT_CHARACTER_NUM == 3 )); then NOT_CHARACTER="▒"
-elif (( NOT_CHARACTER_NUM == 4 )); then NOT_CHARACTER="▓"
-elif (( NOT_CHARACTER_NUM == 5 )); then NOT_CHARACTER="█"
+if (( NOT_CHARACTER_NUM == 1 )); then NOT_CHARACTER=$CHAR_1 
+elif (( NOT_CHARACTER_NUM == 2 )); then NOT_CHARACTER=$CHAR_2
+elif (( NOT_CHARACTER_NUM == 3 )); then NOT_CHARACTER=$CHAR_3
+elif (( NOT_CHARACTER_NUM == 4 )); then NOT_CHARACTER=$CHAR_4
+elif (( NOT_CHARACTER_NUM == 5 )); then NOT_CHARACTER=$CHAR_5
 else  echo -e "Error [NOT_CHARACTER_NUM] \n\tThe \"NOT_CHARACTER_NUM\" variable can only take numbers between 1 and 5 \n(1: , 2:░, 3:▒, 4:▓, 5:█)" ; exit
 fi
 
