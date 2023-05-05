@@ -1,20 +1,5 @@
 #!/bin/bash
 
-# To repeat the characters of the logo, to increase the width of the logo in a controlled manner, the characters that make up the logo are used repeatedly.
-CHARACTER_TO_MANY=2    # [1:░, 2:░░, 3:░░░, 4:░░░░, 5:░░░░ ...]
-
-# Up to this character for use in logo writing
-CHARACTER_NUM=5        # [1: , 2:░, 3:▒, 4:▓, 5:█]
-
-# up to this character for use in the mole parts of the logo
-NOT_CHARACTER_NUM=3    # [1: , 2:░, 3:▒, 4:▓, 5:█]
-
-# The distance makes the upper part of the logo
-CLEAR_SCREEN_ON_START=true # [true or false]
-
-# When the program finishes running, it clears the terminal screen 
-CLEAR_SCREEN_ON_END=false # [true or false]
-
 # Characters 
 CHAR_1=" "
 CHAR_2="░"
