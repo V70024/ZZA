@@ -1,4 +1,4 @@
-> <a href="https://www.buymeacoffee.com/V70024" target="_blank"> English page</a>
+> <a href="en-README.md" target="_blank"> English page</a>
 
 <div align="center" style="display: inline_block">
 
