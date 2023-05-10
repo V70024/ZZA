@@ -36,7 +36,7 @@ GREEN='\033[0;32m'
 WHITE='\033[0;37m'
 
 # Logo design
-LOGO="""${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}
+art="""${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}
 ${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NONE}
 ${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${CHARACTER}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}
 ${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}${NOT_CHARACTER}${NOT_CHARACTER}${NOT_CHARACTER}${GREEN}${CHARACTER}${NONE}
@@ -52,7 +52,7 @@ ${WHITE}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}${CHARACTER}
 
 # The coordinates that determine the logo to be placed in the center of the terminal
 padding_top=$(( ($(tput lines) - 15) / 2 ))
-padding_left=$(( ($(tput cols) - 19) / 2 ))
+padding_left=$(( ($(tput cols) - 25) / 2 ))
 
 # When the program is executed, it clears the terminal screen
 if [ "$CLEAR_SCREEN_ON_START" = true ]; then clear ; sleep 0.2
@@ -63,12 +63,12 @@ for ((i=1; i<=padding_top; i++)); do echo "" ; done
 
 # Displays the logo with a space from the left so that the logo is centered on the terminal
 while read -r line; do
-    printf "%*s%b\n" $padding_left '' "$line" ; sleep 0.07
-done <<< "$LOGO"
+    printf "%*s%b\n" $padding_left '' "$line" ; sleep 0.03
+done <<< "$art"
 
 # Space forms the final part of the logo
-for ((i=1; i<=padding_top-1; i++)); do echo "" ; done
+for ((i=0; i<=padding_top-1; i++)); do echo "" ; done
 
-# When the program finishes running, it clears the terminal screen
+#When the program finishes running, it clears the terminal screen
 if [ "$CLEAR_SCREEN_ON_END" = true ]; then sleep 1.5 ; clear
 fi
